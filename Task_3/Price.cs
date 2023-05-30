@@ -20,5 +20,15 @@ namespace Task_3
             Cost = cost;
         }
 
+
+        public void ShowInfo()
+        {
+            Console.WriteLine(new String('-',50));
+            Console.WriteLine($"Назва товара: {ProductName}");
+            Console.WriteLine($"Назва постачальника: {StoreName}");
+            Console.WriteLine($"Ціна товара: {Cost}грн");
+            Console.WriteLine(new String('-', 50));
+        }
+
     }
 }

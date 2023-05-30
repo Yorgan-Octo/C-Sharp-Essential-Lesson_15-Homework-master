@@ -29,6 +29,34 @@ namespace Task_5
             }
             return operand;
         }
+
+        public static int InNumInteger(string info = "Введіть число: ")
+        {
+            int operand;
+            while (true)
+            {
+                try
+                {
+                    Console.Write(info);
+                    operand = int.Parse(Console.ReadLine());
+                    break;
+                }
+                catch
+                {
+                    Console.Clear();
+                    ShowError("Помилка Вводу! Спробуйте ще!");
+                }
+            }
+            return operand;
+        }
+
+        public static string InNumString(string info = "Введіть cтроку: ")
+        {
+            Console.Write(info);
+            return Console.ReadLine();
+        }
+
+
         public static string InMathOperator(string info = "Введіть оператор: ")
         {
 
