@@ -57,6 +57,28 @@ namespace Task_5
         }
 
 
+        public static DateTime InData(string info = "Введіть число: ")
+        {
+            DateTime dataStartWorker = default;
+            while (true)
+            {
+                try
+                {
+                    Console.WriteLine("Введіть дату початку роботы формат (день/месяц/год) или (день.месяц.год)");
+                    Console.Write("Дата: ");
+                    dataStartWorker = DateTime.Parse(Console.ReadLine());
+                    break;
+                }
+                catch
+                {
+                    Console.Clear();
+                    UserInterface.ShowError("Невірний формат дати!");
+                }
+            }
+            return dataStartWorker;
+        }
+
+
         public static string InMathOperator(string info = "Введіть оператор: ")
         {
 

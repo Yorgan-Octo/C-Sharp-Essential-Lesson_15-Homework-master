@@ -19,22 +19,22 @@ namespace Task_3
 
             Price[] prices = new Price[numberPrise];
 
-            //for (int i = 0; i < numberPrise; i++)
-            //{
-            //    Console.Clear();
+            for (int i = 0; i < numberPrise; i++)
+            {
+                Console.Clear();
 
-            //    string productName = UserInterface.InNumString("Введіть імя товара: ");
-            //    string storeName = UserInterface.InNumString("Введіть імя постачальника: "); ;
-            //    int cost = UserInterface.InNumInteger("Введыть цінц оовара: ");
+                string productName = UserInterface.InNumString("Введіть імя товара: ");
+                string storeName = UserInterface.InNumString("Введіть імя постачальника: "); ;
+                int cost = UserInterface.InNumInteger("Введыть цінц оовара: ");
 
-            //    prices[i] = new Price(productName, storeName, cost);
-            //}
+                prices[i] = new Price(productName, storeName, cost);
+            }
 
             //для прискорення перевірки
-            prices[0] = new Price("111", "Dino", 5678);
-            prices[1] = new Price("222", "Dino", 1234);
-            prices[2] = new Price("333", "Awrora", 2345);
-            prices[3] = new Price("444", "Awrora", 3567);
+            //prices[0] = new Price("111", "Dino", 5678);
+            //prices[1] = new Price("222", "Dino", 1234);
+            //prices[2] = new Price("333", "Awrora", 2345);
+            //prices[3] = new Price("444", "Awrora", 3567);
 
             prices = prices.OrderBy(name => name.StoreName).ToArray(); //для сортування
 
