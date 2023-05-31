@@ -33,8 +33,6 @@ namespace Task_5
                     Console.Clear();
                     Console.WriteLine($"Результат: {namber1} {mathOperato} {namber2} = {resalt}");
                 }
-                else if (double.IsNaN(resalt.Value))
-                    UserInterface.ShowError("Схоже щьось не так! Спобуйте пізніше!");
 
                 Console.ReadKey();
             }
