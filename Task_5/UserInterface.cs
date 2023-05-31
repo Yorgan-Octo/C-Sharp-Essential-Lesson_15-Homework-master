@@ -60,19 +60,25 @@ namespace Task_5
         public static DateTime InData(string info = "Введіть число: ")
         {
             DateTime dataStartWorker = default;
+            Exception ex = new Exception("Не вірний формат дати!");
             while (true)
             {
                 try
                 {
-                    Console.WriteLine("Введіть дату початку роботы формат (день/месяц/год) или (день.месяц.год)");
-                    Console.Write("Дата: ");
-                    dataStartWorker = DateTime.Parse(Console.ReadLine());
+                    Console.Write(info);
+                    dataStartWorker = DateTime.Parse($"1/1/{Console.ReadLine()}");
+
+                    if ((int)dataStartWorker.Year < 1950)
+                    {
+                        throw ex = new Exception("Занадто рання дата!");
+                    }
+
                     break;
                 }
                 catch
                 {
                     Console.Clear();
-                    UserInterface.ShowError("Невірний формат дати!");
+                    UserInterface.ShowError(ex.Message);
                 }
             }
             return dataStartWorker;

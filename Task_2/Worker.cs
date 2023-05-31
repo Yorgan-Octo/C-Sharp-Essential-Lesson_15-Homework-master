@@ -24,7 +24,11 @@ namespace Task_2
 
         public void ShowInfo()
         {
-
+            Console.WriteLine(new String('-',50));
+            Console.WriteLine($"ФІО: {NameWorker}");
+            Console.WriteLine($"Посада: {PositionWorker}");
+            Console.WriteLine($"Початок роботи: {DateOfWorkStart.Year}");
+            Console.WriteLine(new String('-', 50));
         }
 
     }

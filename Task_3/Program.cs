@@ -12,7 +12,7 @@ namespace Task_3
     {
         static void Main()
         {
-
+            //UserInterface знаходится в Task_5
 
             int numberPrise = UserInterface.InNumInteger("Розмір Прайса: ");
 
